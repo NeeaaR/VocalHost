@@ -1,0 +1,42 @@
+body{
+    background-color:#1b252f;
+}
+
+.container{
+    margin-top: 1%;
+}
+
+h1{
+    letter-spacing: 0.2em;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 0;
+}
+
+hr{
+    width: 70%;
+    line-height: 0;
+}
+
+.col-sm-12.col-md-6.offset-md-3{
+    padding: 3% 4% 2% 4%;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.btn.btn-primary.btn-lg.btn-block{
+    background-color:#283039;
+    padding-left: 10px;
+
+    border-color: #283039;
+}
+
+.btn.btn-primary.btn-lg.btn-block:hover{
+    background-color: #274557;
+    border-color: #274557;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+    font-weight: 400;
+}
