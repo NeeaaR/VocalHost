@@ -29,8 +29,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm to install`
 
-npm install --save reactstrap react react-dom
-npm install --save bootstrap
-npm install react-chat-elements --save
-npm install react-router-dom
+npm install --save reactstrap react react-dom <br/>
+npm install --save bootstrap <br/>
+npm install react-chat-elements --save <br/>
+npm install react-router-dom <br/>
 
