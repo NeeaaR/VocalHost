@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, Form, Label, Input, Button, Container, Row, Col} from 'reactstrap';
+import { FormGroup, Form, Label, Input, Button, Container, Row, Col, NavLink} from 'reactstrap';
 
 class Signup extends React.Component{
     constructor(props){
@@ -56,7 +56,7 @@ class Signup extends React.Component{
     render(){
         return(
             <div>
-                <Container>
+                <Container className="pt-5">
                     <Row>
                         <Col sm="12" md={{ size: 6, offset: 3 }}>
                         <Form>
@@ -104,9 +104,13 @@ class Signup extends React.Component{
                             </FormGroup>
                             <Button color="primary" size="lg" block>Inscription</Button>
                         </Form>
+                            <NavLink className="text-center" href={"/Login"}>
+                                Connexion
+                            </NavLink>
                         </Col>
                     </Row>
                 </Container>
+                
             </div>
         )
     }

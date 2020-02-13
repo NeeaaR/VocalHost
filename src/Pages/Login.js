@@ -1,14 +1,16 @@
 import React from 'react';
-import { FormGroup, Form, Label, Input, Button, Container, Row, Col, CustomInput} from 'reactstrap';
+import { FormGroup, Form, Label, Input, Button, Container, Row, Col, CustomInput, NavLink} from 'reactstrap';
 
 class Login extends React.Component{
     render(){
         return(
             <div>
-                <Container>
+                <Container className="pt-5">
                     <Row>
                         <Col sm="12" md={{ size: 6, offset: 3 }}>
                         <Form>
+                            <h1 className="text-center">VocalHost</h1>
+                            <hr/>
                             <FormGroup>
                                 <Label>Email</Label>
                                 <Input type="email" name="email" placeholder="Entrer votre adresse email..." />
@@ -22,6 +24,9 @@ class Login extends React.Component{
                             </FormGroup>
                             <Button color="primary">Connexion</Button>
                         </Form>
+                        <NavLink className="text-center" href={"/signup"}>
+                                Inscription
+                            </NavLink>
                         </Col>
                     </Row>
                 </Container>
