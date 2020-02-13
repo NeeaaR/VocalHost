@@ -22,7 +22,7 @@ class Chat extends React.Component{
         }
     }}/>
 
-<MessageBox
+    <MessageBox
     position={'right'}
     type={'photo'}
     text={'react.svg'}
