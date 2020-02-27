@@ -46,9 +46,10 @@ class Nav extends React.Component{
 
     render() {
         return (
-        <div className="h-100">
+        <div className="nav">
                 <Col className=" border-right pr-0 h-100" >
                 <div className="text-center pt-3">{this.state.message}</div>
+                <hr/>
                     <Row className="pt-5 pb-5 mx-auto" xs="10">
                         <NavLink href="#" style={{color: 'black'}} onMouseEnter = {() => this.message() } onMouseLeave = {() => this.Cinfo()}>
                             <img src={require("../assets/img/icMess.png")} alt="icMess" style={{ width: 70 }}></img>

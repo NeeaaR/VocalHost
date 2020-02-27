@@ -1,21 +1,63 @@
 import React from 'react'
-import {Form, FormGroup, Input} from 'reactstrap';
+import { Form, FormGroup, Input } from 'reactstrap';
 
-class Send extends React.Component{
+class Send extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            userInput: '',
+            items: []
+        };
+    }
+
+    onChange(event) {
+        this.setState({
+            userInput: event.target.value
+        });
+    }
+    addTodo(event) {
+        event.preventDefault();
+        this.setState({
+            userInput:'',
+            items: [...this.state.items, this.state.userInput]
+        });
+    }
+
     render() {
-    
+
         return (
-            <Form className="" >  
+            <div className="send">
+                <Form>
 
-                <FormGroup>
-                    <input className="file" type="file" name="file" id="" />
-                    <Input  type="text" name="text" id="text" placeholder="Message..." />
-                </FormGroup>
-            </Form>      
+                    <FormGroup className="sendChild">
+                        <Input
+                            className="file"
+                            type="file"
+                            name="file"
+                        />
+                        <Input
+                            type="text"
+                            name="text"
+                            id="text"
+                            placeholder="Message..."
+                            value={this.state.userInput}
+                            onChange={this.onChange.bind(this)}
+                        />
+
+                        <input
+                            className="env"
+                            type="submit"
+                            onClick={this.addTodo.bind(this)}
+                        />
+
+                    </FormGroup>
+                </Form>
+            </div>
 
 
-    );
-    } 
+
+        );
+    }
 }
 
 export default Send;
@@ -29,11 +71,11 @@ export default Send;
                         </FormGroup> }
                         </Col>
                     </Row>
-                    <Row className="pt-1"> 
+                    <Row className="pt-1">
                     <Col sm="12" md={{ size: 6, offset: 3 }}>
-                        
+
                     </Col>
                     <Col>
-                        
+
                     </Col>
                     </Row> */

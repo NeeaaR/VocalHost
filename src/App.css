@@ -1,9 +1,28 @@
 .container2{
-
-    height : 700px;
     width: 100%;
 }
 
 .file{
    font-size: 10px;
 } 
+.send{
+    width: 100%;
+    background-color:white;
+    opacity: 1;
+    position: fixed;
+    bottom: 0px;
+}
+.env{
+    display: none;
+}
+.sendChild{
+    width: 60%;
+}
+.membre{
+    height: 100%;
+    position: fixed;
+}
+.nav{
+    height: 100%;
+    position: fixed;
+}

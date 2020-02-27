@@ -5,52 +5,38 @@ import { MessageList } from 'react-chat-elements';
 
 
 
-class Chat extends React.Component{
+class Chat extends React.Component {
     render() {
-    
+
         return (
-            <div className="container2 pt-3">
+            <div className="container2">
                 <MessageBox
-    position={'left'}
-    type={'text'}
-    text={'react.svg'}
-    data={{
-        uri: 'https://facebook.github.io/react/img/logo.svg',
-        status: {
-            click: false,
-            loading: 0,
-        }
-    }}/>
+                    position={'left'}
+                    type={'text'}
+                    text={'react.svg'}
+                    data={{
+                        uri: '',
+                        status: {
+                            click: false,
+                            loading: 0,
+                        }
+                    }} />
+                <MessageList
+                    className='message-list'
+                    lockable={true}
+                    toBottomHeight={'100%'}
+                    dataSource={[
+                        {
+                            position: 'right',
+                            type: 'text',
+                            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                            // date: new Date(),
+                        },
 
-<MessageBox
-    position={'right'}
-    type={'photo'}
-    text={'react.svg'}
-    data={{
-        uri: 'https://facebook.github.io/react/img/logo.svg',
-        status: {
-            click: false,
-            loading: 0,
-        }
-    }}/>
-    
-    <MessageList
-    className='message-list'
-    lockable={true}
-    toBottomHeight={'100%'}
-    dataSource={[
-        {
-            position: 'right',
-            type: 'text',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-            date: new Date(),
-        },
-        
-    ]} />
-
+                    ]} />
             </div>
 
-    );
+        );
     }
 }
 
