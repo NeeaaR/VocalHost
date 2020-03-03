@@ -1,5 +1,7 @@
 import React from 'react'
 import { Form, FormGroup, Input } from 'reactstrap';
+import { MessageBox } from 'react-chat-elements';
+import { MessageList } from 'react-chat-elements';
 
 class Send extends React.Component {
     constructor() {
@@ -18,44 +20,70 @@ class Send extends React.Component {
     addTodo(event) {
         event.preventDefault();
         this.setState({
-            userInput:'',
+            userInput: '',
             items: [...this.state.items, this.state.userInput]
         });
+    }
+    renderTodos() {
+        return this.state.items.map((item) => {
+            return (
+                <div key={item}>
+                    {item}
+                </div>
+            )
+        })
     }
 
     render() {
 
         return (
-            <div className="send">
-                <Form>
+            <div>
+                <div className="container2"> 
+                       
+                       <MessageBox
+                       position={'left'}
+                       type={'text'}
+                       text={this.renderTodos()}
+                       data={{
+                           uri: 'https://.github.io/react/img/logo.svg',
+                           status: {
+                               click: false,
+                               loading: 0,
+                           }
+                       }} />
+                    
+                    
 
-                    <FormGroup className="sendChild">
-                        <Input
-                            className="file"
-                            type="file"
-                            name="file"
-                        />
-                        <Input
-                            type="text"
-                            name="text"
-                            id="text"
-                            placeholder="Message..."
-                            value={this.state.userInput}
-                            onChange={this.onChange.bind(this)}
-                        />
+                </div>
+                <div className="send">
 
-                        <input
-                            className="env"
-                            type="submit"
-                            onClick={this.addTodo.bind(this)}
-                        />
+                    <Form>
 
-                    </FormGroup>
-                </Form>
+                        <FormGroup className="sendChild">
+                            <Input
+                                className="file"
+                                type="file"
+                                name="file"
+                            />
+                            <Input
+                                type="text"
+                                name="text"
+                                id="text"
+                                placeholder="Message..."
+                                value={this.state.userInput}
+                                onChange={this.onChange.bind(this)}
+                            />
+
+                            <input
+                                className="env"
+                                type="submit"
+                                onClick={this.addTodo.bind(this)}
+                            />
+
+                        </FormGroup>
+                    </Form>
+                </div>
             </div>
-
-
-
         );
     }
 }
@@ -64,18 +92,4 @@ export default Send;
 
 
 
-/* <Row className="pt-3 pl-3">
-                        <Col sm="12" md={{ size: 3, offset:5}}>
-                        { <FormGroup>
-                            <a><Input type="file" name="file" id="exampleFile"/></a>
-                        </FormGroup> }
-                        </Col>
-                    </Row>
-                    <Row className="pt-1">
-                    <Col sm="12" md={{ size: 6, offset: 3 }}>
 
-                    </Col>
-                    <Col>
-
-                    </Col>
-                    </Row> */
