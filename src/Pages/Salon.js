@@ -1,8 +1,8 @@
 import React from 'react';
 import Send from '../Components/Send';
 import Nav from '../Components/Nav';
+import MembreSalon from '../Components/MembreSalon';
 import { Row, Col } from 'reactstrap';
-import MembreMess from '../Components/MembreMess';
 
 class Home extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class Home extends React.Component {
                         <Nav />
                     </Col>
                     <Col xs="2" className="p-0">
-                        <MembreMess />
+                        <MembreSalon />
                     </Col>
                     <Col className="p-0" xs="8">
                         

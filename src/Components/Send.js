@@ -27,7 +27,7 @@ class Send extends React.Component {
     renderTodos() {
         return this.state.items.map((item) => {
             return (
-                <div key={item} className="container2">
+                <div className="container2">
 
                     <MessageBox
                         position={'right'}
@@ -44,7 +44,7 @@ class Send extends React.Component {
             )
         })
     }
-    
+
     render() {
 
         return (

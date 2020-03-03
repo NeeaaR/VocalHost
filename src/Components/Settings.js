@@ -1,32 +1,32 @@
 import React from 'react';
-import {ModalBody,ModalFooter, Col, Row, ListGroup, ListGroupItem, TabContent} from 'reactstrap';
+import { ModalBody, ModalFooter, Col, Row, ListGroup, ListGroupItem, TabContent } from 'reactstrap';
 import { useState } from 'react';
-class Settings extends React.Component{
+class Settings extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-                modalisOpen: false,
-                activeTab: 1
-            }
+            modalisOpen: false,
+            activeTab: 1
+        }
     }
 
-    toggleModal(){
+    toggleModal() {
         this.setState({
             modalisOpen: !this.state.modalisOpen
         })
     }
 
-    ControlledTabs(){
+    ControlledTabs() {
         const [key, setKey] = useState('home')
     }
 
-    ActiveTab(){
-        
+    ActiveTab() {
+
     }
 
-    render(){        
-        return(
+    render() {
+        return (
             <div>
                 <ModalBody className="pt-0 pb-0">
                     <Row>
@@ -43,7 +43,8 @@ class Settings extends React.Component{
                         </Col>
                     </Row>
                 </ModalBody>
-                <ModalFooter>Copyright</ModalFooter>  
+                <ModalFooter>Copyright</ModalFooter>
+                
             </div>
         )
     }

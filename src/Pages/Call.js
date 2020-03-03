@@ -1,10 +1,10 @@
 import React from 'react';
 import Send from '../Components/Send';
 import Nav from '../Components/Nav';
+import MembreCall from '../Components/MembreCall';
 import { Row, Col } from 'reactstrap';
-import MembreMess from '../Components/MembreMess';
 
-class Home extends React.Component {
+class Call extends React.Component {
     render() {
         return (
             <div>
@@ -13,10 +13,9 @@ class Home extends React.Component {
                         <Nav />
                     </Col>
                     <Col xs="2" className="p-0">
-                        <MembreMess />
+                        <MembreCall />
                     </Col>
                     <Col className="p-0" xs="8">
-                        
                         <Send />
                     </Col>
                 </Row>
@@ -25,4 +24,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Call;

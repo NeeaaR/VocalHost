@@ -2,6 +2,7 @@ import React from 'react'
 import {NavLink, Row, Col, Modal, ModalHeader} from 'reactstrap';
 import Settings from '../Components/Settings';
 
+
 class Nav extends React.Component{
 
     constructor(props) {
@@ -58,17 +59,17 @@ class Nav extends React.Component{
                 <div className="text-center pt-3">{this.state.message}</div>
                 <hr/>
                     <Row className="pt-5 pb-5 mx-auto" xs="10">
-                        <NavLink href="#" style={{color: 'black'}} onMouseEnter = {() => this.message() } onMouseLeave = {() => this.Cinfo()}>
+                        <NavLink href="/" style={{color: 'black'}} onMouseEnter = {() => this.message() } onMouseLeave = {() => this.Cinfo()}>
                             <img src={require("../assets/img/icMess.png")} alt="icMess" style={{ width: 70 }}></img>
                         </NavLink>
                     </Row>
                     <Row className="pt-5 pb-5 mx-auto" xs="10">
-                        <NavLink href="#" style={{color: 'black'}} onMouseEnter = {() => this.appel() } onMouseLeave = {() => this.Cinfo()}>
+                        <NavLink href="/Call" style={{color: 'black'}} onMouseEnter = {() => this.appel() } onMouseLeave = {() => this.Cinfo()}>
                             <img src={require("../assets/img/icCall.png")} alt="icCall" style={{ width: 60 }}></img>
                         </NavLink>
                     </Row>
                     <Row className="pt-5 pb-5 mx-auto" xs="10">
-                        <NavLink href="#" style={{color: 'black'}} onMouseEnter = {() => this.groupe() } onMouseLeave = {() => this.Cinfo()}>
+                        <NavLink href="/Salon" style={{color: 'black'}} onMouseEnter = {() => this.groupe() } onMouseLeave = {() => this.Cinfo()}>
                             <img src={require("../assets/img/icGroup.png")} alt="icGroup" style={{ width: 60 }}></img>
                         </NavLink>
                     </Row>
