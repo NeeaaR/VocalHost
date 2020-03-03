@@ -1,7 +1,7 @@
 import React from 'react';
 import { ModalBody, ModalFooter, Col, Row, ListGroup, ListGroupItem, TabContent } from 'reactstrap';
 import { useState } from 'react';
-class Settings extends React.Component {
+class Plus extends React.Component {
 
     constructor(props) {
         super(props);
@@ -13,25 +13,25 @@ class Settings extends React.Component {
     change() {
         if (this.state.count == 0) {
             return (
-                <Row>Connexion</Row>
+                <Row>...</Row>
             )
 
         }
         else if (this.state.count == 1) {
             return (
-                <Row>Audio</Row>
+                <Row>...</Row>
 
             )
         }
         else if (this.state.count == 2) {
             return (
-                <Row>Raccourcis</Row>
+                <Row>...</Row>
             )
 
         }
         else if (this.state.count == 3) {
             return (
-                <Row>Confidential</Row>
+                <Row>...</Row>
             )
         }
     }
@@ -64,10 +64,10 @@ class Settings extends React.Component {
                     <Row>
                         <Col className="p-0">
                             <ListGroup>
-                                <ListGroupItem onClick={this.connexion.bind(this)} tag="button">Connexion</ListGroupItem>
-                                <ListGroupItem onClick={this.audio.bind(this)} tag="button">Audio</ListGroupItem>
-                                <ListGroupItem onClick={this.rac.bind(this)} tag="button">Raccourcis</ListGroupItem>
-                                <ListGroupItem onClick={this.confid.bind(this)} tag="button">Confidentialités</ListGroupItem>
+                                <ListGroupItem onClick={this.connexion.bind(this)} tag="button">Ajouter un ami</ListGroupItem>
+                                <ListGroupItem onClick={this.audio.bind(this)} tag="button">...</ListGroupItem>
+                                <ListGroupItem onClick={this.rac.bind(this)} tag="button">...</ListGroupItem>
+                                <ListGroupItem onClick={this.confid.bind(this)} tag="button">...</ListGroupItem>
                             </ListGroup>
                         </Col>
                         <Col className="ml-1">
@@ -81,4 +81,4 @@ class Settings extends React.Component {
     }
 }
 
-export default Settings;
+export default Plus;
