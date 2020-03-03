@@ -1,15 +1,22 @@
 import React from 'react'
-import {NavLink, Row, Col} from 'reactstrap';
+import {NavLink, Row, Col, Modal, ModalHeader} from 'reactstrap';
+import Settings from '../Components/Settings';
 
 class Nav extends React.Component{
 
     constructor(props) {
         super(props);
         this.state = {
-                message: 'Vocalhost'
-                
+                message: 'Vocalhost',
+                modalisOpen: false
             }
       }
+
+    toggleModal(){
+        this.setState({
+            modalisOpen: !this.state.modalisOpen
+        })
+    }
      
     message(){
         this.setState({
@@ -66,10 +73,14 @@ class Nav extends React.Component{
                         </NavLink>
                     </Row>
                     <Row className="pt-5 pb-5 mx-auto" xs="10">
-                        <NavLink href="#" style={{color: 'black'}} onMouseEnter = {() => this.set() } onMouseLeave = {() => this.Cinfo()}>
+                        <NavLink href="#" style={{color: 'black'}} onClick={this.toggleModal.bind(this)} onMouseEnter = {() => this.set() } onMouseLeave = {() => this.Cinfo()}>
                             <img src={require("../assets/img/icSet.png")} alt="icSet" style={{ width: 60 }}></img>
                         </NavLink>
-                    </Row>
+                        <Modal isOpen={this.state.modalisOpen} size="lg">
+                            <ModalHeader toggle={this.toggleModal.bind(this)}>Paramètres</ModalHeader>
+                            <Settings></Settings>
+                        </Modal>
+                    </Row>  
                 </Col>
         </div>
         
