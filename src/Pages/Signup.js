@@ -77,7 +77,7 @@ class Signup extends React.Component{
                             <FormGroup>
                                 <Label>Date de naissance :</Label>
                             </FormGroup>
-                            <Row form>
+                            {/* <Row form>
                                 <Col md={4}>
                                 <FormGroup>
                                     <Input type="select" name="day">{this.Day()}</Input>
@@ -93,13 +93,13 @@ class Signup extends React.Component{
                                     <Input type="select" name="year" id="exampleSelect">{this.Years()}</Input>
                                 </FormGroup>  
                                 </Col>
-                            </Row>
+                            </Row> */}
                             <FormGroup>
                                 <Label>Sexe</Label>
                                 <Input type="select" name="select">
                                     <option>Homme</option>
                                     <option>Femme</option>
-                                    <option>Non binaire (fdp)</option>
+                                    <option>Non binaire</option>
                                 </Input>
                             </FormGroup>
                             <Button color="primary" size="lg" block>Inscription</Button>
