@@ -6,23 +6,55 @@ class Settings extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modalisOpen: false,
-            activeTab: 1
+            count: 0
         }
     }
 
-    toggleModal() {
+    change() {
+        if (this.state.count == 0) {
+            return (
+                <Row>Connexion</Row>
+            )
+
+        }
+        else if (this.state.count == 1) {
+            return (
+                <Row>Audio</Row>
+
+            )
+        }
+        else if (this.state.count == 2) {
+            return (
+                <Row>Raccourcis</Row>
+            )
+
+        }
+        else if (this.state.count == 3) {
+            return (
+                <Row>Confidential</Row>
+            )
+        }
+    }
+
+    connexion(){
         this.setState({
-            modalisOpen: !this.state.modalisOpen
+            count: 0
         })
     }
-
-    ControlledTabs() {
-        const [key, setKey] = useState('home')
+    audio(){
+        this.setState({
+            count: 1
+        })
     }
-
-    ActiveTab() {
-
+    rac(){
+        this.setState({
+            count: 2
+        })
+    }
+    confid(){
+        this.setState({
+            count: 3
+        })
     }
 
     render() {
@@ -32,19 +64,19 @@ class Settings extends React.Component {
                     <Row>
                         <Col className="p-0">
                             <ListGroup>
-                                <ListGroupItem tag="button" href="connexion" action>Connexion</ListGroupItem>
-                                <ListGroupItem tag="button" href="#" action>Audio</ListGroupItem>
-                                <ListGroupItem tag="button" href="#" action>Raccourcis</ListGroupItem>
-                                <ListGroupItem tag="button" href="#" action>Confidentialités</ListGroupItem>
+                                <ListGroupItem onClick={this.connexion.bind(this)} tag="button">Connexion</ListGroupItem>
+                                <ListGroupItem onClick={this.audio.bind(this)} tag="button">Audio</ListGroupItem>
+                                <ListGroupItem onClick={this.rac.bind(this)} tag="button">Raccourcis</ListGroupItem>
+                                <ListGroupItem onClick={this.confid.bind(this)} tag="button">Confidentialités</ListGroupItem>
                             </ListGroup>
                         </Col>
                         <Col className="ml-1">
-                            <Row>Contenu de la page</Row>
+                            {this.change()}
                         </Col>
                     </Row>
                 </ModalBody>
                 <ModalFooter>Copyright</ModalFooter>
-                
+
             </div>
         )
     }
