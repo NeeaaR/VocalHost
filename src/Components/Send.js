@@ -27,34 +27,29 @@ class Send extends React.Component {
     renderTodos() {
         return this.state.items.map((item) => {
             return (
-                <div key={item}>
-                    {item}
+                <div key={item} className="container2">
+
+                    <MessageBox
+                        position={'right'}
+                        type={'text'}
+                        text={item}
+                        data={{
+                            uri: 'https://.github.io/react/img/logo.svg',
+                            status: {
+                                click: false,
+                                loading: 0,
+                            }
+                        }} />
                 </div>
             )
         })
     }
-
+    
     render() {
 
         return (
             <div>
-                <div className="container2"> 
-                       
-                       <MessageBox
-                       position={'left'}
-                       type={'text'}
-                       text={this.renderTodos()}
-                       data={{
-                           uri: 'https://.github.io/react/img/logo.svg',
-                           status: {
-                               click: false,
-                               loading: 0,
-                           }
-                       }} />
-                    
-                    
-
-                </div>
+                {this.renderTodos()}
                 <div className="send">
 
                     <Form>
