@@ -55,11 +55,16 @@ class Send extends React.Component {
                     <Form>
 
                         <FormGroup className="sendChild">
-                            <Input
-                                className="file"
-                                type="file"
-                                name="file"
-                            />
+                            <div className="contFile">
+                                <label for="file"><img src={require("../assets/img/paperclip.png")} style={{ width: 25 }}></img></label>
+                                <input
+                                    className="file"
+                                    type="file"
+                                    name="file"
+                                    id="file"
+                                />
+                            </div>
+
                             <Input
                                 type="text"
                                 name="text"
@@ -70,7 +75,7 @@ class Send extends React.Component {
                             />
 
                             <input
-                                className="env"
+                                className="submit"
                                 type="submit"
                                 onClick={this.addTodo.bind(this)}
                             />
