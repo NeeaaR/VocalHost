@@ -7,7 +7,6 @@ import { ChatList } from 'react-chat-elements';
 class MembreSalon extends React.Component {
     
     render() {
-
         
         return (
             <div className="membre">

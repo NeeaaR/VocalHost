@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink, Row, Col, Modal, ModalHeader} from 'reactstrap';
 import Settings from '../Components/Settings';
-
+import '../assets/css/Settings.css'
 
 class Nav extends React.Component{
 
@@ -77,7 +77,7 @@ class Nav extends React.Component{
                         <NavLink href="#" style={{color: 'black'}} onClick={this.toggleModal.bind(this)} onMouseEnter = {() => this.set() } onMouseLeave = {() => this.Cinfo()}>
                             <img src={require("../assets/img/icSet.png")} alt="icSet" style={{ width: 60 }}></img>
                         </NavLink>
-                        <Modal isOpen={this.state.modalisOpen} size="lg">
+                        <Modal className="modal-dialog" size="xl" isOpen={this.state.modalisOpen}>
                             <ModalHeader toggle={this.toggleModal.bind(this)}>Paramètres</ModalHeader>
                             <Settings></Settings>
                         </Modal>
@@ -88,4 +88,5 @@ class Nav extends React.Component{
     );
     }
 }
+
 export default Nav;

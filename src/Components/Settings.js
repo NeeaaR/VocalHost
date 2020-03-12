@@ -1,35 +1,43 @@
 import React from 'react';
-import { ModalBody, ModalFooter, Col, Row, ListGroup, ListGroupItem, TabContent } from 'reactstrap';
-import { useState } from 'react';
+import { ModalBody, ModalFooter, Col, Row, ListGroup, ListGroupItem, Button } from 'reactstrap';
+import Audio from './Settings/Audio';
+import Profile from './Settings/Profile';
+import Notifications from './Settings/Notifications';
+import Preferences from './Settings/Preferences';
 class Settings extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            count: 0
+            count: 0,
+            active: false
         }
     }
 
+    isActive() {
+
+    }
+
     change() {
-        if (this.state.count == 0) {
+        if (this.state.count === 0) {
             return (
-                <Row>Connexion</Row>
+                <Profile/>
             )
 
         }
-        else if (this.state.count == 1) {
+        else if (this.state.count === 1) {
             return (
-                <Row>Audio</Row>
+                <Audio/>
 
             )
         }
-        else if (this.state.count == 2) {
+        else if (this.state.count === 2) {
             return (
-                <Row>Raccourcis</Row>
+                <Notifications/>
             )
 
         }
-        else if (this.state.count == 3) {
+        else if (this.state.count === 3) {
             return (
                 <Row>Confidential</Row>
             )
@@ -64,9 +72,9 @@ class Settings extends React.Component {
                     <Row>
                         <Col className="p-0">
                             <ListGroup>
-                                <ListGroupItem onClick={this.connexion.bind(this)} tag="button">Connexion</ListGroupItem>
+                                <ListGroupItem onClick={this.connexion.bind(this)} tag="button" active>Connexion</ListGroupItem>
                                 <ListGroupItem onClick={this.audio.bind(this)} tag="button">Audio</ListGroupItem>
-                                <ListGroupItem onClick={this.rac.bind(this)} tag="button">Raccourcis</ListGroupItem>
+                                <ListGroupItem onClick={this.rac.bind(this)} tag="button">Notifications</ListGroupItem>
                                 <ListGroupItem onClick={this.confid.bind(this)} tag="button">Confidentialités</ListGroupItem>
                             </ListGroup>
                         </Col>
@@ -75,8 +83,10 @@ class Settings extends React.Component {
                         </Col>
                     </Row>
                 </ModalBody>
-                <ModalFooter>Copyright</ModalFooter>
-
+                <ModalFooter>
+                    <Button color="secondary" disabled>Appliquer</Button>
+                    <Button color="primary">Ok</Button>
+                </ModalFooter>
             </div>
         )
     }
