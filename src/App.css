@@ -12,11 +12,20 @@
     position: fixed;
     bottom: 0px;
 }
-.env{
+.contFile{
+    width: 40px;
+    text-align: center;
+    margin-top: 4px;
+}
+.file{
+    display: none;
+}
+.submit{
     display: none;
 }
 .sendChild{
     width: 60%;
+    display: flex;
 }
 .membre{
     height: 100%;
@@ -25,4 +34,9 @@
 .nav{
     height: 100%;
     position: fixed;
+}
+.plus{
+    border: 1px solid;
+    border-radius: 100px;
+    background-color:white;
 }

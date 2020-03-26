@@ -87,6 +87,7 @@ class Settings extends React.Component {
                     <Button color="secondary" disabled>Appliquer</Button>
                     <Button color="primary">Ok</Button>
                 </ModalFooter>
+
             </div>
         )
     }
