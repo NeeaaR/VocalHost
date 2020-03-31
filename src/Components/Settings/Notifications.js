@@ -5,8 +5,8 @@ class Notifications extends React.Component{
     render(){
         return(
             <div>
-                <h5 className="text-center">Notifications</h5>
-                <Button></Button>
+                <h5 className="text-center">Preferences</h5>
+                <Button>Activer</Button>
             </div>
         )
     }

@@ -3,7 +3,9 @@ import React from 'react';
 class Profile extends React.Component{
     render(){
         return(
-            <div></div>
+            <div>
+                <h5 className="text-center">CONNEXION</h5>
+            </div>
         )
     }
 }

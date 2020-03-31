@@ -2,6 +2,9 @@ import React from 'react';
 import { FormGroup, Form, Label, Input, Button, Container, Row, Col, CustomInput, NavLink} from 'reactstrap';
 
 class Login extends React.Component{
+    componentDidMount(){
+        document.title = "VocalHost | Connexion"
+    }
     render(){
         return(
             <div>

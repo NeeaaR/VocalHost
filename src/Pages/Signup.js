@@ -2,6 +2,9 @@ import React from 'react';
 import { FormGroup, Form, Label, Input, Button, Container, Row, Col, NavLink} from 'reactstrap';
 
 class Signup extends React.Component{
+    componentDidMount(){
+        document.title = "VocalHost | Inscription"
+    }
     constructor(props){
         super(props);
         this.state = {

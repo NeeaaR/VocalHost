@@ -5,6 +5,9 @@ import MembreCall from '../Components/MembreCall';
 import { Row, Col } from 'reactstrap';
 
 class Call extends React.Component {
+    componentDidMount(){
+        document.title = "VocalHost | Appels"
+    }
     render() {
         return (
             <div>

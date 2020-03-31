@@ -39,7 +39,7 @@ class Settings extends React.Component {
         }
         else if (this.state.count === 3) {
             return (
-                <Row>Confidential</Row>
+                <Preferences/>
             )
         }
     }
@@ -74,7 +74,7 @@ class Settings extends React.Component {
                             <ListGroup>
                                 <ListGroupItem onClick={this.connexion.bind(this)} tag="button" active>Connexion</ListGroupItem>
                                 <ListGroupItem onClick={this.audio.bind(this)} tag="button">Audio</ListGroupItem>
-                                <ListGroupItem onClick={this.rac.bind(this)} tag="button">Notifications</ListGroupItem>
+                                <ListGroupItem onClick={this.rac.bind(this)} tag="button">Preferences</ListGroupItem>
                                 <ListGroupItem onClick={this.confid.bind(this)} tag="button">Confidentialités</ListGroupItem>
                             </ListGroup>
                         </Col>

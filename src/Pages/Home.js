@@ -5,6 +5,9 @@ import { Row, Col } from 'reactstrap';
 import Membre from '../Components/Membre';
 
 class Home extends React.Component {
+    componentDidMount(){
+        document.title = "VocalHost | Messages"
+    }
     render() {
         return (
             <div>

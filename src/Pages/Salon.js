@@ -5,6 +5,9 @@ import Membre from '../Components/Membre';
 import { Row, Col } from 'reactstrap';
 
 class Home extends React.Component {
+    componentDidMount(){
+        document.title = "VocalHost | Groupes"
+    }
     render() {
         return (
             <div>
