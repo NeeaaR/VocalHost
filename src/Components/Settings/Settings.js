@@ -1,9 +1,9 @@
 import React from 'react';
 import { ModalBody, ModalFooter, Col, Row, ListGroup, ListGroupItem, Button } from 'reactstrap';
-import Audio from './Settings/Audio';
-import Profile from './Settings/Profile';
-import Notifications from './Settings/Notifications';
-import Preferences from './Settings/Preferences';
+import Audio from './Audio';
+import Profile from './Profile';
+import Notifications from './Notifications';
+import Preferences from './Preferences';
 class Settings extends React.Component {
 
     constructor(props) {

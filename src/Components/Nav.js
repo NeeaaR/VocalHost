@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink, Row, Col, Modal, ModalHeader} from 'reactstrap';
-import Settings from '../Components/Settings';
+import Settings from './Settings/Settings';
 import '../assets/css/Settings.css'
 
 class Nav extends React.Component{

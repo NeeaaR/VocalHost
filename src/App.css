@@ -1,42 +1,61 @@
-.container2{
+.container2 {
     width: 100%;
 }
 
-.file{
-   font-size: 10px;
-} 
-.send{
+.file {
+    font-size: 10px;
+}
+.send {
     width: 100%;
-    background-color:white;
+    background-color: white;
     opacity: 1;
     position: fixed;
     bottom: 0px;
 }
-.contFile{
+.contFile {
     width: 40px;
     text-align: center;
     margin-top: 4px;
 }
-.file{
+.file {
     display: none;
 }
-.submit{
+.submit {
     display: none;
 }
-.sendChild{
+.sendChild {
     width: 60%;
     display: flex;
 }
-.membre{
+.membre {
     height: 100%;
     position: fixed;
 }
-.nav{
+.nav {
     height: 100%;
     position: fixed;
 }
-.plus{
-    border: 1px solid;
-    border-radius: 100px;
-    background-color:white;
+.plus {
+    font-size: 130%;
+}
+.setFriend {
+    width: 100%;
+    text-align: center;
+    padding-left: 200px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+.friend {
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 50px;
+    font-weight: 700
+}
+.friend:hover{
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: white;
 }

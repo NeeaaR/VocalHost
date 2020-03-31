@@ -3,6 +3,7 @@ import Send from '../Components/Send';
 import Nav from '../Components/Nav';
 import { Row, Col } from 'reactstrap';
 import Membre from '../Components/Membre/Membre';
+import Friend from '../Components/Friend';
 
 class Home extends React.Component {
 
@@ -40,11 +41,11 @@ class Home extends React.Component {
                         <Nav />
                     </Col>
                     <Col xs="2" className="p-0">
-                        <Membre name = "Privés" option = "Amis"/>
+                        <Membre name = "Privés"/>
                     </Col>
                     <Col className="p-0" xs="8">
                         
-                        <Send />
+                        <Friend />
                     </Col>
                 </Row>
             </div>

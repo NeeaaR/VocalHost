@@ -13,45 +13,54 @@ class Plus extends React.Component {
     change() {
         if (this.state.count == 0) {
             return (
-                <Row>...</Row>
+                <div>
+                   <h5 className="text-center mt-2">Ajouter un ami</h5>
+                </div>
+
             )
 
         }
         else if (this.state.count == 1) {
             return (
-                <Row>...</Row>
+                <div>
+                    <Row>Ajouter un ami</Row>
+                </div>
 
             )
         }
         else if (this.state.count == 2) {
             return (
-                <Row>...</Row>
+                <div>
+                    <Row>Ajouter un ami</Row>
+                </div>
             )
 
         }
         else if (this.state.count == 3) {
             return (
-                <Row>...</Row>
+                <div>
+                    <Row>Ajouter un ami</Row>
+                </div>
             )
         }
     }
 
-    connexion(){
+    connexion() {
         this.setState({
             count: 0
         })
     }
-    audio(){
+    audio() {
         this.setState({
             count: 1
         })
     }
-    rac(){
+    rac() {
         this.setState({
             count: 2
         })
     }
-    confid(){
+    confid() {
         this.setState({
             count: 3
         })
@@ -65,7 +74,7 @@ class Plus extends React.Component {
                         <Col className="p-0">
                             <ListGroup>
                                 <ListGroupItem onClick={this.connexion.bind(this)} tag="button">Ajouter un ami</ListGroupItem>
-                                <ListGroupItem onClick={this.audio.bind(this)} tag="button">...</ListGroupItem>
+                                <ListGroupItem onClick={this.audio.bind(this)} tag="button">Visionner ses amis</ListGroupItem>
                                 <ListGroupItem onClick={this.rac.bind(this)} tag="button">...</ListGroupItem>
                                 <ListGroupItem onClick={this.confid.bind(this)} tag="button">...</ListGroupItem>
                             </ListGroup>

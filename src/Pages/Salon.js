@@ -1,7 +1,7 @@
 import React from 'react';
 import Send from '../Components/Send';
 import Nav from '../Components/Nav';
-import Membre from '../Components/Membre';
+import Membre from '../Components/Membre/Membre';
 import { Row, Col } from 'reactstrap';
 
 class Home extends React.Component {
