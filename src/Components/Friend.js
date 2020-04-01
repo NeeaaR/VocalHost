@@ -132,7 +132,7 @@ class Settings extends React.Component {
                             <div>{this.clickPlus()}</div>
                         </div>
                     </div>
-                    <div className="divFriendList">
+                    <div className="divFriendList"> 
                         <img className="profil"/*src={require("../assets/img/")}*/ alt=""></img>
                         <div>
                             <h5>Aaron</h5>
