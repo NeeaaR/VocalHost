@@ -59,3 +59,75 @@
     border: 1px solid #007bff;
     color: white;
 }
+.blockFriend{
+    padding: 4em;
+    width: 100%;
+}
+.titleFriend{
+    padding: 30px 0px 60px 30px ;
+}
+.friendSearch{
+    width: 100%;
+}
+.friendSearch form{
+    display: flex;
+}
+.friendSearch input:first-child{
+    margin: 60px 50px 0px 30px;
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #9c9c9c;
+    text-indent: 10px;
+}
+.friendSearch input:nth-child(2){
+    margin-top: 60px;
+    width: 20%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #9c9c9c;
+}
+.friendList .divFriendList{
+    display: flex;
+    border-top :1px solid rgb(194, 194, 194) ;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+}
+.divFriendList .profil{
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin: 0px 20px 0px 20px ;
+}
+.divFriendList div h5, p{
+    margin: 0px;
+}
+.optionFriend{
+    margin: 10px 0px 0px 35em;
+}
+.optionFriend a img{
+    border: 1px solid rgb(95, 95, 95);
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.ifPlus{
+    border: 1px solid rgb(95, 95, 95);
+    /* border-radius: 5px; */
+    width: 150px;
+    height: auto;
+    margin: 0px;
+}
+.ifPlus ul{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+.ifPlus ul li{
+    height: 30px;
+}

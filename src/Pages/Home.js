@@ -40,7 +40,7 @@ class Home extends React.Component {
                         <Nav />
                     </Col>
                     <Col xs="2" className="p-0">
-                        <Membre name = "Privés" option = "Amis"/>
+                        <Membre name = "Privés" option = "Amis>"/>
                     </Col>
                     <Col className="p-0" xs="8">
                         
