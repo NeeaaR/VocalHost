@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './assets/css/Settings.css'
 import Routes from './Routes';
 
 function App() {

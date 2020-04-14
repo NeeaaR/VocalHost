@@ -5,7 +5,9 @@ import Profile from './Settings/Profile';
 import Notifications from './Settings/Notifications';
 import Preferences from './Settings/Preferences';
 class Settings extends React.Component {
-
+    componentDidMount(){
+        document.title = "VocalHost | Paramètres"
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -28,7 +30,6 @@ class Settings extends React.Component {
         else if (this.state.count === 1) {
             return (
                 <Audio/>
-
             )
         }
         else if (this.state.count === 2) {
@@ -65,6 +66,10 @@ class Settings extends React.Component {
         })
     }
 
+    Active(){
+        
+    }
+
     render() {
         return (
             <div>
@@ -72,7 +77,7 @@ class Settings extends React.Component {
                     <Row>
                         <Col className="p-0">
                             <ListGroup>
-                                <ListGroupItem onClick={this.connexion.bind(this)} tag="button" active>Connexion</ListGroupItem>
+                                <ListGroupItem onClick={this.connexion.bind(this)} tag="button">Connexion</ListGroupItem>
                                 <ListGroupItem onClick={this.audio.bind(this)} tag="button">Audio</ListGroupItem>
                                 <ListGroupItem onClick={this.rac.bind(this)} tag="button">Preferences</ListGroupItem>
                                 <ListGroupItem onClick={this.confid.bind(this)} tag="button">Confidentialités</ListGroupItem>

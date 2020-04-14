@@ -1,7 +1,22 @@
 import React from 'react';
-import { FormGroup, Form, Label, Input, Col, Row } from 'reactstrap';
+import { FormGroup, Form, Label, Input, Col, Row, Button, CustomInput } from 'reactstrap';
 
 class Audio extends React.Component{
+    
+    MicrophoneTest(){
+        var h;
+        var soundAllowed = function (stream) {
+            window.persistAudioStream = stream;
+            
+        }
+    
+        var soundNotAllowed = function (error) {
+            h.innerHTML = "Vous devez autoriser votre micro.";
+            console.log(error);
+        }
+        navigator.getUserMedia({audio:true}, soundAllowed, soundNotAllowed);
+    }
+
     render(){
         return(
            <div>
@@ -26,6 +41,15 @@ class Audio extends React.Component{
                     </Col>
                     </Row>
                 </Form>
+                <hr/>
+                <FormGroup>
+                    <Button color="primary" onClick={this.MicrophoneTest}>Test Micro</Button>
+                </FormGroup>
+                <br/>
+                <FormGroup>
+                    <Label>Ajuster le son du micro :</Label>
+                    <CustomInput type="range" id="exampleCustomRange" name="customRange" />
+                </FormGroup>
            </div> 
         )
     }
