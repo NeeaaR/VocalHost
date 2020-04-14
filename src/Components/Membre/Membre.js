@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row, Col, Modal, ModalHeader } from 'reactstrap';
+import { Row, Col, NavLink } from 'reactstrap';
 import 'react-chat-elements/dist/main.css';
 import { ChatList } from 'react-chat-elements';
-import Plus from './Plus';
+
 
 
 class MembreMess extends React.Component {
@@ -13,11 +13,11 @@ class MembreMess extends React.Component {
             modalisOpen: false
         }
     }
-    toggleModal() {
-        this.setState({
-            modalisOpen: !this.state.modalisOpen
-        })
-    }
+    // toggleModal() {
+    //     this.setState({
+    //         modalisOpen: !this.state.modalisOpen
+    //     })
+    // }
 
     render() {
 
@@ -29,11 +29,7 @@ class MembreMess extends React.Component {
                         <div className="">
                             <h1 className="pb-3 pt-4 text-center">{this.props.name}</h1>
                             <div className="text-center pb-4">
-                                <button onClick={this.toggleModal.bind(this)} className="plus">{this.props.option} ></button>
-                                <Modal isOpen={this.state.modalisOpen} size="lg">
-                                    <ModalHeader toggle={this.toggleModal.bind(this)}>{this.props.option}</ModalHeader>
-                                    <Plus></Plus>
-                                </Modal>
+                                <a href="/Friends" className="plus" >{this.props.option}</a>
                             </div>
                             <ChatList
                                 className='chat-list'

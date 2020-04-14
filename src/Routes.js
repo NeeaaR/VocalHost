@@ -6,7 +6,7 @@ import Call from './Pages/Call';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Test from './Pages/Test';
-
+import Friends from './Pages/Friends';
 
 class Routes extends React.Component {
     render() {
@@ -20,6 +20,7 @@ class Routes extends React.Component {
                         <Route path="/login" component={Login} />
                         <Route path="/signup" component={Signup} />
                         <Route path="/test" component={Test} />
+                        <Route path="/Friends" component={Friends} />
                     </Switch>
                 </Router>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Send from '../Components/Send';
 import Nav from '../Components/Nav';
-import MembreCall from '../Components/MembreCall';
+import MembreCall from '../Components/Membre/MembreCall';
 import { Row, Col } from 'reactstrap';
 
 class Call extends React.Component {
